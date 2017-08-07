@@ -1,34 +1,22 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
 
 namespace WebApi.Server.Hub.Hub
 {
-    public class ChatHub : Hub<IClient>
+    public class ChatHub : Microsoft.AspNet.SignalR.Hub
     {
-        public void NewMessage(string name, string message)
+        private static readonly IHubContext HubContext = GlobalHost.ConnectionManager.GetHubContext<ChatHub>();
+        
+        public void CustomData(CustomData customData)
         {
-            Clients.All.NewMessage(name, message);
-        }
-        public Task<int> Counter(int i)
-        {
-            return Clients.All.Counter(i);
-        }
-
-        public void CustomData(string name, string message)
-        {
-            Clients.All.AddContosoChatMessageToPage(new CustomChatMessage {UserName = name, Message = message});
+            HubContext.Clients.All.CustomData(customData,DateTime.UtcNow);
         }
     }
 
-    public interface IClient
+    public class CustomData
     {
-        void NewMessage(string name, string message);
-        Task<int> Counter(int i);
-        void AddContosoChatMessageToPage(CustomChatMessage customChatMessage);
-    }
-    public class CustomChatMessage
-    {
-        public string UserName { get; set; }
+        public string Name { get; set; }
         public string Message { get; set; }
     }
 }

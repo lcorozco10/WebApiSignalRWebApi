@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Server.Hub", "WebApi.Server.Hub\WebApi.Server.Hub.csproj", "{CDB18AB7-D59C-4485-A09D-0E2AAB2F1E83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.Client", "Angular.Client\Angular.Client.csproj", "{5648E51E-6D39-4A2C-8C8F-F32DD02AAC7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.Hub", "SignalR.Hub\SignalR.Hub.csproj", "{6F739B31-0ABD-43DE-9B10-B636C6FB9F9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{5648E51E-6D39-4A2C-8C8F-F32DD02AAC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5648E51E-6D39-4A2C-8C8F-F32DD02AAC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5648E51E-6D39-4A2C-8C8F-F32DD02AAC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F739B31-0ABD-43DE-9B10-B636C6FB9F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F739B31-0ABD-43DE-9B10-B636C6FB9F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F739B31-0ABD-43DE-9B10-B636C6FB9F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F739B31-0ABD-43DE-9B10-B636C6FB9F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45436E89-1BEB-49EA-8CE6-A42DCEC68705}
 	EndGlobalSection
 EndGlobal

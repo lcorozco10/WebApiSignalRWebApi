@@ -1,5 +1,6 @@
-﻿using System.Web.Http;
-using WebApi.Server.Hub.Hub;
+﻿using SignalR.Hub;
+using System.Web.Http;
+
 
 namespace WebApi.Server.Hub.Controllers
 {

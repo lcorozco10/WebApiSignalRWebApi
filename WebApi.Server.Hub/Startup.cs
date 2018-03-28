@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Owin;
 using WebApi.Server.Hub.Cors;
 
@@ -20,7 +21,8 @@ namespace WebApi.Server.Hub
                 // By default this will allow all origins. You can 
                 // configure the set of origins and/or http verbs by
                 // providing a cors options with a different policy.
-                map.UseCors(CorsHelpers.CorsOptions());
+                map.UseCors(CorsOptions.AllowAll);
+                // map.UseCors(CorsHelpers.CorsOptions());
                 var hubConfiguration = new HubConfiguration
                 {
                     // You can enable JSONP by uncommenting line below.

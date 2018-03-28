@@ -23,31 +23,6 @@ angular.module("AspNetWebApiSignalRDemo", [])
     };
 })
 
-.controller("AppController", ["SignalrService", function (SignalrService) {
-    SignalrService.initialize();
+.controller("AppController", ["SignalrService", function (signalrService) {
+    signalrService.initialize();
 }]);
-
-
-/*
- var contosoChatHubProxy = $.connection.chatHub;
-    contosoChatHubProxy.client.AddCustomChatMessageToPage = function (name, message) {
-        console.log(name + ' ' + message);
-    };
-    var x;
-    $.connection.hub.start()
-    .done(function() {
-        console.log('Now connected, connection ID=' + $.connection.hub.id);
-        $.connection.hub.received(function (data) {
-            console.log(data.A[0]);
-            x = data;
-            contosoChatHubProxy.client.addCustomChatMessageToPage = function (message) {
-                console.log(message.UserName + ' ' + message.Message);
-            };
-
-        });
-
-        })
-    .fail(function () { console.log('Could not connect'); });
-
-
-*/

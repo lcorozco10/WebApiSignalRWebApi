@@ -14,6 +14,8 @@ namespace WebApi.Server.Hub
         {
             ConfigureAuth(app);
 
+            
+            
             // Branch the pipeline here for requests that start with "/signalr"
             app.Map("/signalr", map =>
             {
@@ -21,8 +23,8 @@ namespace WebApi.Server.Hub
                 // By default this will allow all origins. You can 
                 // configure the set of origins and/or http verbs by
                 // providing a cors options with a different policy.
-                map.UseCors(CorsOptions.AllowAll);
-                // map.UseCors(CorsHelpers.CorsOptions());
+                //map.UseCors(CorsOptions.AllowAll);
+                map.UseCors(CorsHelpers.CorsOptions());
                 var hubConfiguration = new HubConfiguration
                 {
                     // You can enable JSONP by uncommenting line below.

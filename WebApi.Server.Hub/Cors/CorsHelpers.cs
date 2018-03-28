@@ -13,6 +13,7 @@ namespace WebApi.Server.Hub.Cors
             {
                 AllowAnyMethod = true,
                 AllowAnyHeader = true,
+                SupportsCredentials = true
             };
 
             // Try and load allowed origins from web.config
@@ -47,6 +48,7 @@ namespace WebApi.Server.Hub.Cors
 
             return new CorsOptions
             {
+
                 PolicyProvider = new CorsPolicyProvider
                 {
                     PolicyResolver = context => Task.FromResult(corsPolicy)
